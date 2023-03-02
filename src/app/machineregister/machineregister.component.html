@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form #regForm="ngForm" (ngSubmit)="machineReg(regForm.value)">
+            ENter Owner Name: <input type="text" ngModel name="ownerName"><br>
+            Enter your Machine Name:<input type="text" ngModel name="machineName"><br>
+            Enter your Mobile Number:<input type="number" ngModel name="mobileNumber"><br>
+            Enter your description: <input type="text" ngModel name="description"><br>
+            Enter machine cost per hour: <input type="number" ngModel name="cost"><br> 
+            Enter your address : <input type="text" ngModel name="address"><br>
+            Enter your email : <input type="email" ngModel name="email"><br>
+            upload a pic: <input type="text" ngModel name="pic"><br>
+            create a Password: <input type="password" ngModel name="password"><br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

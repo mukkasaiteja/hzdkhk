@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url("assets/Images/agencies.jpg");
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+         <div class="jumbotron"> 
+            <div align="center"> 
+        <form #regForm="ngForm" (ngSubmit)="printDetails(regForm.value)">
+            Enter your Name:<input type="text" ngModel name="farmerName"><br>
+            Enter your Mobile Number:<input type="number" ngModel name="mobileNumber"><br>
+            <!-- Enter your gender:<input type="text" ngModel name="gender"><br>
+            Enter your Date of join: <input type="date" ngModel name="date"><br>
+            Enter your salary: <input type="number" ngModel name="salary"><br> -->
+            Enter your address : <input type="text" ngModel name="address"><br>
+            Enter your email : <input type="email" ngModel name="email"><br>
+            create a Password: <input type="password" ngModel name="password"><br>
+            <button>Submit</button>
+        </form>
+    </div>
+    </div> 
+    </div>
+    <div class="col-lg-3"></div>
+    </body>
+</html>
+
+
+

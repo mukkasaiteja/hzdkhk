@@ -1,0 +1,30 @@
+<html>
+ <head>
+ </head>
+ <body>
+   <div class="container">
+    <div class="pageheader">
+ <h1 align="center">Welcome To Login Page</h1>
+</div>
+
+ <div class = "col-lg-4"></div>
+  <div class = "col-lg-4 bg-success"> 
+<div class="jumbotron">
+    
+ <form #loginform="ngForm" (ngSubmit)="loginformsubmit(loginform.value)" novalidate align="center">
+    <h2 align="center"><img src="https://media.tenor.com/DeFyYP6Q580AAAAM/baywa-bayern.gif" class="img-circle" width="100px" height="100px"></h2>
+<div><br><span class="glyphicon glyphicon-user"></span><input type ="email" placeholder="Enter emailId" ngModel #id="ngModel" name="email" minlength="2" maxlength="20" required></div><br>
+<div><br><span class="glyphicon glyphicon-lock"></span><input type = "password" placeholder="Enter Your Password" ngModel #password="ngModel" name="password" minlength="2" maxlength="20" required></div><br>
+<label><input type="checkbox">Remember Me </label><br>
+ <button class="btn-lg btn-success" [disabled]="loginform.invalid" >Login</button>
+</form> 
+<p *ngIf="id.errors?.['required'] && email.touched">Login Id Is Mandatory<p>
+<p *ngIf="id.errors?.['minlength']">Login Id must contain 6 charcters</p>
+<p *ngIf="password.errors?.['required'] && password.touched">password Id Is Mandatory</p>
+<p *ngIf="password.errors?.['minlength']">Password must contain 6 charcters</p>   
+</div>
+</div> 
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+</body> 
+</html>

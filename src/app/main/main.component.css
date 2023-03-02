@@ -1,0 +1,22 @@
+a:before{
+    color: rgb(5, 87, 15);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+    color: rgb(23, 110, 5);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }

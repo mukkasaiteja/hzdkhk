@@ -1,0 +1,9 @@
+
+<form #regForm="ngForm" (ngSubmit)="dealerReg(regForm.value)">
+    Enter Dealer Name: <input type="text" ngModel name="dealerName"><br>
+    Enter Mobile Number: <input type="number" ngModel name="mobileNumber"><br>
+    Enter Your Address: <input type="text" ngModel name="address"><br>
+    ENter your Email: <input type="email" ngModel name="email"><br>
+    Enter your Password: <input type="password" ngModel name="password"><br>
+    <button>Register</button>
+</form>

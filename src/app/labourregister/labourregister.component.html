@@ -1,0 +1,10 @@
+<form #regForm="ngForm" (ngSubmit)="registerLabour(regForm.value)">
+    Enter your Name: <input type="text" ngModel name="labourName"><br>
+    Enter your Mobile Number: <input type="number" ngModel name="mobileNumber"><br>
+    Enter your your Address: <input type="text" ngModel name="address"><br>
+    Enter your Team Quantity : <input type="number" ngModel name="quantity"><br>
+    Enter your email : <input type="email" ngModel name="email"><br>
+    create a Password: <input type="password" ngModel name="password"><br>
+    <button>Submit</button>
+</form>
+

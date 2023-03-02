@@ -1,0 +1,11 @@
+<h1>Welcome cropsale</h1>
+<form #regForm="ngForm" (ngSubmit)="CropSaleReg(regForm.value)">
+    Enter your Crop Name: <input type="text" ngModel name="cropName"><br><br>
+    Enter Farmer Name:<input type="text" ngModel name="farmerId"><br><br>
+    Enter your Address: <input type="text" ngModel name="address"><br><br>
+    Enter your cost: <input type="text" ngModel name="cost"><br><br>
+    Enter your estimation: <input type="text" ngModel name="estimation"><br><br>
+    Enter your QEstimated Quantity: <input type="text" ngModel name="quantity"><br><br>
+    upload a picture: <input type="text" ngModel name="pic"><br><br><br>
+    <button >Register Crop</button>
+</form>

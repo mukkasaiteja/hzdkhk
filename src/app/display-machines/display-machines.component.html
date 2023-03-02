@@ -1,0 +1,68 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+ <div class="container">
+  <div class="modal fade" id="machineModel">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close" data-dismiss="modal">&times;</span>
+                  <h4 class="modal-title">Update Form</h4>
+              </div>
+              <div class="modal-body">
+                  <form class="form-group">
+                      Enter owner Name: <input type="text" name="ownerName" [(ngModel)]="edittemp.ownerName"
+                          class="form-control" enable="false"><br />
+                      Enter Machine Name: <input type="text" name="mName" [(ngModel)]="edittemp.mName"
+                          class="form-control" enable="false"><br />
+                      Enter MobileNumber: <input type="text" name="mNumber" [(ngModel)]="edittemp.mNumber"
+                          class="form-control"><br />
+                      Enter Cost: <input type="text" name="cost" [(ngModel)]="edittemp.cost"
+                          class="form-control"><br />
+                      Enter description: <input type="text" name="description" [(ngModel)]="edittemp.description"
+                          class="form-control"><br />
+                      Enter Email Id: <input type="text" name="email" [(ngModel)]="edittemp.email"
+                          class="form-control"><br />
+                       
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-primary btn-sm" (click)="updateMachine()" data-dismiss="modal">Update</button>
+              </div>
+          </div>
+      </div>
+  </div>  
+</div>
+
+
+
+<table class="table table-hover" border="2">
+    <thead>
+      <tr>
+        <th scope="col">Machine Image</th>
+        <th scope="col">Machine Name</th>
+        <th scope="col">Owner Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Cost per Hour</th>
+        <th scope="col">Mobile Number</th>
+        <!-- <th scope="col">Machine</th> -->
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of machinary" class="table-success">
+        <td><img src="{{m.pic}}" alt="under_Process" height="100" width="100"></td>
+        <td>{{m.machineName}}</td>
+        <td>{{m.ownerName}}</td>
+        <td>{{m.description}}</td>
+        <td>{{m.cost}}</td>
+        <td>{{m.mobileNumber}}</td>
+        <td><button (click)="deleteMachine(m.machineId)" class="glyphicon glyphicon-trash"></button></td>
+        <td><button (click)="showEditPopup(m)" class="glyphicon glyphicon-pencil"></button></td>
+       
+      </tr>  
+    </tbody>
+  </table>

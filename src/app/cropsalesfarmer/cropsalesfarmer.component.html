@@ -1,0 +1,23 @@
+
+<body>
+    <table class="table table-hover" border="2">
+        <thead>
+            <tr>
+                <th scope="col">Crop Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Estimation</th>
+                <th scope="col">Pic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of farmerdata" class="table-success">
+                <td>{{f.cropName}}</td>
+                <td>{{f.address}}</td>
+                <td>{{f.cost}}</td>
+                <td>{{f.estimation}}</td>
+                <td><img src="{{f.pic}}" alt="under_Process" height="100" width="100"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
